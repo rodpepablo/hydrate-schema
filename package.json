@@ -1,0 +1,51 @@
+{
+  "name": "hydrate-schema",
+  "version": "1.0.0",
+  "description": "Build an object by parsing another using different functions for every new property.",
+  "module": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "mkdir -p dist && babel index.js -d dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablo-Rodriguez/hydrate-schema.git"
+  },
+  "keywords": [
+    "utilities",
+    "functional",
+    "programming",
+    "inmutability"
+  ],
+  "author": "Pablo Rodríguez <rodpepablo@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Pablo-Rodriguez/hydrate-schema/issues"
+  },
+  "homepage": "https://github.com/Pablo-Rodriguez/hydrate-schema#readme",
+  "bundleDependencies": [
+    "@babel/cli",
+    "@babel/core",
+    "@babel/preset-env"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "ramda": "^0.27.0"
+  },
+  "devDependencies": {
+    "core-js": "^3.8.3",
+    "jest": "^26.2.2",
+    "regenerator-runtime": "^0.13.7",
+    "uuid": "^8.3.0"
+  },
+  "jest": {
+    "transform": null,
+    "setupFiles": [
+      "core-js/stable",
+      "regenerator-runtime/runtime"
+    ]
+  }
+}
