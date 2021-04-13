@@ -13,7 +13,7 @@ This library is supposed to be used in a functional programing context, hence th
 
 ```{js}
   import hydrateSchema from 'hydrate-schema'
-  // or const hydrateSchema = require('hydrate-schema')
+  // or const hydrateSchema = require('hydrate-schema').default
 
   const schema = {
     bar: '3',
