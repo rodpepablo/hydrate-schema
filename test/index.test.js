@@ -1,6 +1,4 @@
 
-import * as R from 'ramda'
-
 import hydrateSchema from '../'
 
 test('hydrate schema with simple schema', () => {
@@ -21,11 +19,11 @@ test('hydrate schema with simple schema', () => {
 test('hydrate schema with complex schema', () => {
   const schema = {
     bar: '3',
-    fn: R.pipe(R.prop('foo'), R.toUpper),
-    arr: [ 1, R.pipe(R.prop('other'), Number, R.add(1)), 3],
+    fn: (obj) => obj.foo.toUpperCase(),
+    arr: [ 1, (obj) => (Number(obj.other) + 1), 3],
     obj: {
       subbar: 42,
-      subfn: R.pipe(R.path(['obj', 'subfoo']), String),
+      subfn: (obj) => String(obj.obj.subfoo),
       emptyArr: []
     }
   }

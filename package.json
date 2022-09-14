@@ -29,13 +29,10 @@
     "@babel/core",
     "@babel/preset-env"
   ],
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
-    "ramda": "^0.27.0"
-  },
-  "devDependencies": {
     "core-js": "^3.8.3",
     "jest": "^26.2.2",
     "regenerator-runtime": "^0.13.7",
@@ -47,5 +44,8 @@
       "core-js/stable",
       "regenerator-runtime/runtime"
     ]
+  },
+  "dependencies": {
+    "curry": "^1.2.0"
   }
 }
