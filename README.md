@@ -1,4 +1,5 @@
 # hydrate-schema
+
 Build an object by parsing another using different funcions for every new property
 
 ### Installation
@@ -38,7 +39,7 @@ This library is supposed to be used in a functional programing context, hence th
   // or hydrateSchema(schema)(model)
 
   /* Expected result
-  
+
   {
     bar: '3',
     fn: 'ASD',
@@ -49,7 +50,7 @@ This library is supposed to be used in a functional programing context, hence th
       emptyArr: []
     }
   }
-  
+
   */
 ```
 
@@ -66,7 +67,7 @@ Since hydrateSchema is curried, you can compose different schemas to create a bi
     c: subSchema,
     d: Number
   })
-  
+
 ```
 
 ### Test
