@@ -1,6 +1,6 @@
 {
   "name": "hydrate-schema",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build an object by parsing another using different functions for every new property.",
   "module": "index.js",
   "main": "dist/index.js",
