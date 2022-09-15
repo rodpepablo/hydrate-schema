@@ -1,10 +1,10 @@
-import curry from "curry";
+import { curry } from "@typed/curry";
 
-const is = (Ctor, val) => {
+const is = (Ctor: any, val: any): boolean => {
   return (val != null && val.constructor === Ctor) || val instanceof Ctor;
 };
 
-const hydrateSchema = curry((schema, model) => {
+const hydrateSchema = curry((schema: any, model: any): any => {
   const hydrated = {};
 
   if (is(Array, schema)) {
