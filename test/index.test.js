@@ -1,4 +1,4 @@
-import hydrateSchema from "../index.ts";
+import hydrateSchema from "../src/index.ts";
 
 test("hydrate schema with simple schema", () => {
   const schema = {

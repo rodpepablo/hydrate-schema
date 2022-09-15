@@ -5,10 +5,10 @@ const is = (Ctor: any, val: any): boolean => {
 };
 
 const hydrateSchema = curry((schema: any, model: any): any => {
-  const hydrated = {};
+  const hydrated: Record<string, any> = {};
 
   if (is(Array, schema)) {
-    return schema.map((value) => hydrateSchema(value, model));
+    return schema.map((value: any) => hydrateSchema(value, model));
   } else if (typeof schema === "object") {
     for (let prop in schema) {
       if (typeof schema[prop] === "function") {
@@ -16,7 +16,7 @@ const hydrateSchema = curry((schema: any, model: any): any => {
       } else if (schema[prop] == null) {
         hydrated[prop] = schema[prop];
       } else if (is(Array, schema[prop])) {
-        hydrated[prop] = schema[prop].map((value) =>
+        hydrated[prop] = schema[prop].map((value: any) =>
           hydrateSchema(value, model)
         );
       } else if (is(Date, schema[prop])) {
