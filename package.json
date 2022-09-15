@@ -24,6 +24,11 @@
     "url": "https://github.com/Pablo-Rodriguez/hydrate-schema/issues"
   },
   "homepage": "https://github.com/Pablo-Rodriguez/hydrate-schema#readme",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "bundleDependencies": [
     "@babel/cli",
     "@babel/core",
