@@ -15,6 +15,7 @@ This library is supposed to be used in a functional programing context, hence th
 ```{js}
   import hydrateSchema from 'hydrate-schema'
   // or const hydrateSchema = require('hydrate-schema').default
+  import R from 'ramda'
 
   const schema = {
     bar: '3',
@@ -35,8 +36,8 @@ This library is supposed to be used in a functional programing context, hence th
     }
   }
 
-  hydrateSchema(schema, model)
-  // or hydrateSchema(schema)(model)
+  hydrateSchema(schema, obj)
+  // or hydrateSchema(schema)(obj)
 
   /* Expected result
 
